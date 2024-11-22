@@ -9,7 +9,7 @@
     <h2>Listagem</h2>
     <ul>
         {% for transacao in transacoes %}
-            <li>{{ transacao.descricao }} - {{transacao.data}} - {{transacao.valor}} - {{transacao.categoria}}</li>
+            <li><a href="{% url 'url_update' transacao.id %}">{{ transacao.descricao }}</a> - {{transacao.data}} - {{transacao.valor}} - {{transacao.categoria}}</li>
         {% endfor %}
     </ul>
 
